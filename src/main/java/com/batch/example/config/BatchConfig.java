@@ -24,9 +24,7 @@ import com.batch.example.model.Product;
 public class BatchConfig {
 
 	@Bean
-	public Job jobBean(JobRepository jobRepository, 
-			JobCompletionNotificationImpl listener,
-			Step steps) {
+	public Job jobBean(JobRepository jobRepository, JobCompletionNotificationImpl listener,	Step steps) {
 		return new JobBuilder("job", jobRepository)
 				.listener(listener)
 				.start(steps)
